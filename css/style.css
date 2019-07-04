@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400&display=swap');
 body
 {   margin:0;
-    height:100vh;
+    height:90vh;
     background:#BFD1D9;
-    display: grid;
+    /* display: grid; */
     justify-items: center;
     align-items: center;
     font-family: 'Nunito',sans-serif;
 }
 
+
 .container{
+    margin-left:22em;
+    margin-top:5em;
+    position: relative;
     background: white;
     width: 50%;
     padding: 2em;
@@ -57,3 +61,18 @@ body
 .description p{
     margin:0;
 }
+.header {
+    margin-top:5px;
+    text-align: center;
+    color: #333;
+  }
+  .header span {
+    font-size: 3em;
+    font-weight: bold;
+  }
+  .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 2.5em;
+    background: #333;
+  }

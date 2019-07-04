@@ -9,6 +9,10 @@
     <title> Checkout Menu </title>
 </head>
 <body>
+    <div class="header">
+                <span></span>
+                <div class="cursor"></div>
+    </div>
     <div class="container">
         <h1>My Cart</h1>
         <img src="/images/expand.svg" alt="Expand Cart" id="cta">
@@ -40,10 +44,10 @@
 
     </div>
 
-    <script src="//daybrush.com/scenejs/release/latest/dist/scene.min.js"></script>
 
-
-    <script>
+<script src="//daybrush.com/scenejs/release/latest/dist/scene.min.js"></script>
+<script src="//daybrush.com/scenejs-effects/release/latest/dist/effects.min.js"></script>
+<script>
         var cta= document.getElementById('cta');
 
         var scene  = new Scene({
@@ -121,6 +125,26 @@
             selector:true
         })
 
+       
+           var scene3 = new Scene({
+            ".header span": Scene.typing({
+                text: "Checkout (Click on Expand Button!)",
+                duration: 7,
+                delay: 1,
+            }),
+            ".cursor": {
+                0: { opacity: 0 },
+                0.5: { opacity: 0 },
+                "0.5>": { opacity: 1 },
+                1: { opacity: 1 },
+                options: {
+                iterationCount: 8,
+                }
+            },
+            }, {
+            selector: true
+            }).play();
+
         cta.addEventListener('click',()=>{
             if(scene2.getDirection() === 'normal' ){
                 scene2.playCSS();
@@ -133,6 +157,6 @@
             }
         })
 
-    </script>
+</script>
 </body>
 </html>
